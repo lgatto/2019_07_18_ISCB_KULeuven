@@ -1,4 +1,4 @@
-slides.pdf: slides.tex
+slides.pdf: slides.tex spatprot.tex
 	pdflatex slides.tex
 	bibtex slides
 	pdflatex slides.tex
