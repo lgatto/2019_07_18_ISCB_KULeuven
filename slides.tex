@@ -150,7 +150,7 @@
 \usepackage{amssymb}
 
 
-\date{14 May 2019 -- CompOmics}
+\date{18 July 2019 -- ISCB40 -- Leuven}
 
 \title{Probabilistic modelling of \\ protein sub-cellular localisation}
 
@@ -161,69 +161,27 @@
 }
 
 
-% \AtBeginSection[] % Do nothing for \section*
-% {
-%   \begin{frame}<beamer>
-%     \frametitle{Plan}
-%     \tableofcontents[currentsection]
-%   \end{frame}
-% }
-
-
 \begin{document}
 
 \maketitle
-
-% \begin{frame}{}
-%   Who?
-% \end{frame}
-
-\begin{frame}{Abstract}
-  In biology, \textbf{localisation is function} - understanding the
-  sub-cellular localisation of proteins is paramount to comprehend the
-  context of their functions. Mass spectrometry-based \textbf{spatial
-    proteomics} and contemporary \textbf{machine learning} enable to
-  build proteome-wide spatial maps, informing us on the location of
-  thousands of proteins. Nevertheless, while some proteins can be
-  found in a single location within a cell, up to half of proteins may
-  reside in multiple locations, can dynamically re-localise, or reside
-  within an unknown functional compartment, leading to considerable
-  \textbf{uncertainty} in associating a protein to their sub-cellular
-  location. Recent advances enable us to \textbf{probabilistically}
-  model protein localisation as well as quantify the uncertainty in
-  the location assignments, thus leading to better and more
-  trustworthy biological interpretation of the data.
-\end{frame}
-
-
-\begin{frame}
-  \begin{block}{}
-  \begin{enumerate}
-  \item \textbf{Use case}: spatial proteomics.
-  \item \textbf{Assessing uncertainty} to acquire reliable biological
-    knowledge.
-  \item \textbf{Behind the scenes}: software/data structures and open research
-    practice.
-  \end{enumerate}
-  \end{block}
-\end{frame}
 
 
 \include{spatprot}
 
 
-
 \begin{frame}[fragile]{Conclusions}
   \begin{itemize}
-  \item Protein sub-cellular localisation: technologies (hyperLOPIT)
-    and opportunities.
+  \item Protein sub-cellular localisation: \textit{localisation is
+    function}.
 
   \item Reliance on computational biology, statistics and dedicated
-    software (\texttt{pRoloc} \textit{et al.}) to interpret data and
-    acquire biological knowledge.
+    software (for example \texttt{MSnbase} \citep{Gatto:2012},
+    \texttt{pRoloc} \citep{Gatto:2014}) to interpret data and acquire
+    biological knowledge (details not shown).
 
-  \item Rigorous computational infrastructure and sound data analysis
-    and interpretation is a \textbf{long term investment} (not shown).
+  \item Rigorous computational infrastructure 
+    and sound data analysis and interpretation is a \textbf{long term
+      investment}.
 
   \end{itemize}
 
@@ -242,11 +200,7 @@
     \begin{itemize}
     \item \textbf{Mr Oliver Crook} and \textbf{Dr Lisa Breckels}, (U
       of Cambridge): spatial proteomics, machine learning, software.
-    \item \textbf{Dr Sebastian Gibb} and \textbf{Dr Johannes Rainer}:
-      MS and proteomics software.
-    \item Prof Kathryn Lilley (U of Cambridge), Dr Claire Mulvey,
-      (CRUK Cambridge Institute): data.
-    \item Funding: BBSRC, Wellcome Trust
+    \item Funding: BBSRC (UK), Wellcome Trust (UK)
     \end{itemize}
   \end{block}
 

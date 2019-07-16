@@ -1,74 +1,79 @@
 \section{Spatial proteomics}
 
-\begin{frame}{}
-  \begin{center}
-    \Large{\textbf{Use case}: spatial proteomics.}
-  \end{center}
-\end{frame}
 
-
-\begin{frame}{Cell organisation - regulation of protein localisation}
+\begin{frame}{Cell organisation - \textbf{localisation is function}}
   \begin{center}
-    \includegraphics[width=1\linewidth]{figs/Animal_cell_structure.png} \\
+    \includegraphics[width=.9\linewidth]{figs/Animal_cell_structure.png} \\
     \textbf{\textcolor{Blue}{Spatial proteomics}} is the systematic
     study of protein localisations.
   \end{center}
 
+  \begin{center}
+    \textbf{Localisation -- re-localisation -- mis-localisation}
+  \end{center}
+  
   \tiny Image from Wikipedia
-  \url{http://en.wikipedia.org/wiki/Cell_(biology)}.
+  \url{http://en.wikipedia.org/wiki/Cell_(biology)}.  
 \end{frame}
 
 
-\begin{frame}{Spatial proteomics - Why?}
+%% \begin{frame}{Spatial proteomics - Why?}
 
-  \begin{itemize}
+%%   \begin{itemize}
 
-  \item \textbf{Localisation is function}: Localisation and
-    sequestration of proteins within sub-cellular niches is a
-    fundamental mechanism for the post-translational regulation of
-    protein function.
+%%   \item \textbf{Localisation is function}: Localisation and
+%%     sequestration of proteins within sub-cellular niches is a
+%%     fundamental mechanism for the post-translational regulation of
+%%     protein function.
 
-    \bigskip
+%%     \bigskip
 
-  \item \textbf{Re-localisation}: \textcolor{Blue}{differentiation}
-    stem cells, \textcolor{Blue}{activation} of biological processes.
+%%   \item \textbf{Re-localisation}: \textcolor{Blue}{differentiation}
+%%     stem cells, \textcolor{Blue}{activation} of biological processes.
 
-    \bigskip
+%%     \bigskip
 
-  \item \textbf{Mis-localisation}: Disruption of the
-    targeting/trafficking process alters proper sub-cellular
-    localisation, which in turn perturb the cellular functions of the
-    proteins.
+%%   \item \textbf{Mis-localisation}: Disruption of the
+%%     targeting/trafficking process alters proper sub-cellular
+%%     localisation, which in turn perturb the cellular functions of the
+%%     proteins.
 
-  \end{itemize}
+%%   \end{itemize}
 
-\end{frame}
-
-
-
-\begin{frame}{Spatial proteomics - How, experimentally}
-  \begin{figure}
-    \includegraphics[width=.8\linewidth]{figs/F02-expdesigns.pdf}
-    \caption{Organelle proteomics approaches
-      \citep{Gatto:2010}.}
-  \end{figure}
-
-  \textbf{Gradient approaches}: \cite{Dunkley:2006},
-  \cite{Foster2006}.
-
-  \bigskip
-
-  \textbf{Explorative/discovery approaches},
-  \textcolor{Blue}{steady-state \textbf{global localisation maps}}.
-\end{frame}
+%% \end{frame}
 
 
 \begin{frame}{}
-  \begin{figure}
-    % \includegraphics[width=.8\linewidth]{figs/F03-protocols-8plex.pdf}
-    % \includegraphics[width=.5\linewidth]{figs/expdesign.pdf}
-    \includegraphics[width=.39\linewidth]{figs/workflow_primary.pdf}
-  \end{figure}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+
+      \textbf{Explorative/discovery approaches},
+      \textcolor{Blue}{steady-state \textbf{global localisation maps}}
+      (as opposed to microscopy-based targeted approaches).
+
+      \bigskip
+      
+      \small{
+
+        \textbf{Density gradient}: PCP \citep{Dunkley:2006}, LOPIT
+        \citep{Foster2006}, hyperLOPIT
+        \citep{Christoforou:2016,Mulvey:2017} and \\
+
+        \textbf{Differential centrifugation} \cite{Itzhak:2016},
+        LOPIT-DC \citep{Geladaki:2018}.
+
+      }
+     
+      \bigskip
+      
+      
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=.8\linewidth]{figs/workflow_primary.pdf}
+    \end{column}    
+  \end{columns}
+  
 \end{frame}
 
 \subsubsection*{The data}
@@ -171,7 +176,8 @@
       an \textbf{outlier component}. Outliers are often dispersed and
       thus this additional component is described by a heavy-tailed
       distribution: the multivariate Student's t-distribution, leading
-      us to a \textit{T Augmented Gaussian Mixture model}.
+      us to a \textit{T Augmented Gaussian Mixture model}
+      \citep{Crook:2018,Crook:2019}.
 
     \item<+-> This methodology allows proteome-wide
       \textbf{uncertainty quantification}, thus adding a further layer
@@ -213,26 +219,26 @@
 \end{frame}
 
 
-\begin{frame}[fragile]{}
-      \begin{figure}
-        \sidebysidecaption{0.65\linewidth}{0.3\linewidth}{
-          \includegraphics[width=1\linewidth]{./figs/pca12-ellipses-1.pdf}
-        }{
-          \caption{\scriptsize \justifying Illustration of how the
-            TAGM model describes the pluripotent mouse embryonic stem
-            cell data. Each ellipse contains a proportion of total
-            probability of a particular multivariate Gaussian density.
-            The outer ellipse contains $99\%$ of the total probability
-            whilst the middle and inner ellipses contain $95\%$ and
-            $90\%$ of the probability respectively.}
-          \label{fig:tagm}
-        }
-      \end{figure}
+%% \begin{frame}[fragile]{}
+%%       \begin{figure}
+%%         \sidebysidecaption{0.65\linewidth}{0.3\linewidth}{
+%%           \includegraphics[width=1\linewidth]{./figs/pca12-ellipses-1.pdf}
+%%         }{
+%%           \caption{\scriptsize \justifying Illustration of how the
+%%             TAGM model describes the pluripotent mouse embryonic stem
+%%             cell data. Each ellipse contains a proportion of total
+%%             probability of a particular multivariate Gaussian density.
+%%             The outer ellipse contains $99\%$ of the total probability
+%%             whilst the middle and inner ellipses contain $95\%$ and
+%%             $90\%$ of the probability respectively.}
+%%           \label{fig:tagm}
+%%         }
+%%       \end{figure}
 
-      %% NOTE that while some sub-cellular clusters overlap along PC1 and
-      %% PC2, they are separated along additional dimensions.
+%%       %% NOTE that while some sub-cellular clusters overlap along PC1 and
+%%       %% PC2, they are separated along additional dimensions.
 
-\end{frame}
+%% \end{frame}
 
 \begin{frame}{}
       \begin{figure}
