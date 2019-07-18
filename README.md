@@ -18,3 +18,5 @@ associating a protein to their sub-cellular location. Recent advances
 enable us to probabilistically model protein localisation as well as
 quantify the uncertainty in the location assignments, thus leading to
 better and more trustworthy biological interpretation of the data.
+
+Slides: http://bit.ly/20190718iscb  (under CC-BY license)
